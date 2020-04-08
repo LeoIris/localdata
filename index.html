@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html *{
+            padding: 0;
+            margin: 0;
+        }
+        section{
+            margin-top: 10px;
+            width: 100%;
+        }
+        .layout article div{
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section class="layout float">
+
+        <style media="screen">
+            .layout.float .left{
+                float: left;
+                width: 300px;
+                background-color: red;
+            }
+            .layout.float .right{
+                float: right;
+                width: 300px;
+                background-color: blue;
+            }
+            .layout.float .center{
+                background-color: yellow;
+            }
+        </style>
+        
+        <article class="left-right-center">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h1>浮动解决方案</h1>
+                中间部分自适应
+            </div>
+        </article>
+    </section> 
+    
+
+    <section class="layout absolute">
+
+        <style media="screen">
+            .layout .absolute{
+                height:100px
+            }
+            .layout.absolute .left-center-right > div{
+                position: absolute;
+            }
+            .layout.absolute .left{
+                left: 0;
+                width: 300px;
+                background-color: red;
+            }
+            .layout.absolute .center{
+                left: 300px;
+                right: 300px;
+                background-color: yellow;
+            }
+            .layout.absolute .right{
+                right: 0;
+                width:300px;
+                background-color: blue;
+            }
+        </style>
+        
+        <article class="left-center-right">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h1>绝对定位解决方案</h1>
+              
+            </div>
+        </article>
+    </section>   
+    
+
+    <section class="layout flexbox">
+
+        <style media="screen">
+            .layout .flexbox{
+                margin-top:340px;
+                height: 500px;
+            }
+            .layout.flexbox .left-center-right{
+                display: flex;
+            }
+            .layout.flexbox .left{
+                width: 300px;
+                background-color: red;
+            }
+            .layout.flexbox .center{
+                flex: 1;
+                background-color: yellow;
+            }
+            .layout.flexbox .right{
+                width: 300px;
+                background-color: blue;
+            }
+        </style>
+        
+        <article class="left-center-right">
+            <div class="left"></div>
+            <div class="center">
+                <h1>flexbox解决方案</h1>
+                中间部分自适应
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>   
+
+    
+</body>
+</html>
