@@ -8,18 +8,75 @@
 </head>
 
 <body>
-    <section>
-        <style>
-            img {
-                float: right;
-            }
-            
-        </style>
-        <div>
-            <image src=''>
 
-            </image>
-        </div>
+
+    <!-- BFC不与float重叠 -->
+
+    <section id="layout">
+
+        <style media="screen">
+            #layout {
+
+                background: red;
+
+            }
+
+            #layout .left {
+
+                float: left;
+
+                width: 100px;
+
+                height: 100px;
+
+                background: green;
+
+            }
+
+            #layout .right {
+
+                height: 110px;
+
+                background: blue;
+
+                overflow: auto;
+
+            }
+        </style>
+
+        <div class="left"></div>
+
+        <div class="right"></div>
+
+        <!-- 利用BFC的这一个原理就可以实现两栏布局，左边定宽，右边自适应。不会相互影响，哪怕高度不相等。 -->
+
+    </section>
+    <section id="float">
+
+        <style media="screen">
+            #float {
+
+                background: #434343;
+
+                overflow: auto;
+
+            }
+
+            #float .float {
+
+                float: left;
+
+                font-size: 30px;
+
+            }
+        </style>
+
+        <div class="float">我是浮动元素</div>
+
+
+
+     
+
     </section>
 </body>
 
